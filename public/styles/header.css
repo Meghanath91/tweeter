@@ -1,24 +1,17 @@
 header {
   font-size: medium;
   font-weight:200 ;
-  font-family:'Bungee', cursive;
+  font-family:'Source Sans Pro', sans-serif;
   color:  #FFFFFF;
   height: 500px;
   position : relative;
-  background-color: rgb(228, 96, 20);
+  background-color: rgb(250, 214, 10);
   width: 100%;
-  padding-top: 120px ;
+  padding-top: 130px ;
   text-align: center;
 }
 .name {
-  font-weight: 300;
-  position: relative;
-  font-family: 'Source sans pro';
-  color: #FFFFFF;
+  font-style: Bold;
+  font-size: 24px;
 
-}
-.avatar {
-  size: ;
-  position: relative;
-  
 }
