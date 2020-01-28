@@ -1,0 +1,28 @@
+.section {
+  text-align: center;
+  width: 100%;
+}
+textarea {
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: 'Source Sans Pro',
+    sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 15px;
+  resize: none;
+  background-color: #f4f1ec;
+  line-height: 17px;
+}
+.submit {
+  background-color: #4056A1;
+  font-family:'Bungee', cursive ;
+  font-size:20px;
+  color: white;
+  float: left;
+}
+.counter {
+  float: right;
+  font-family: 'Bungee', cursive ;
+}
