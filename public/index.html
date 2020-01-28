@@ -43,11 +43,12 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
           <form class="form-inline"action="/tweets/" method="POST">
-          <textarea class="textarea"name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="tweetArea" name="text" placeholder="What are you humming about?"></textarea>
           <input class="submit"type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
     </main>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js" ></script>
   </body>
 </html>
