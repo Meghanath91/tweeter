@@ -1,5 +1,5 @@
 main {
-  width:90%;
+  width: 90%;
   text-align: center;
   height: 1000px;
   margin-left: auto;
@@ -7,22 +7,16 @@ main {
   display: block;
 }
 
-.tweet-container {
-  height: 150px;
-  /* border-bottom: 2px solid black; */
-  font-family: 'Source Sans Pro',
-    sans-serif;
+article {
+  border: solid 2px black;
+  height: 170px;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
   font-weight: 600;
   width: 100%;
   margin-top: 60px;
   resize: none;
   background-color: #f4f1ec;
-  /* line-height: 17px; */
-}
-
-article {
-  border:solid 2px black;
 }
 
 .tweetsHeader {
@@ -35,33 +29,40 @@ footer {
   overflow: auto;
 }
 
-article.tweets.p {
+/* article.tweets.p {
   text-align: center;
-}
+} */
 
 .profile-pic {
+  margin: 5px;
   float: left;
 }
 
-.profile-name{
+.profile-name {
+  margin: 18px;
   float: left;
 }
 
 .nickname {
   float: right;
   color: blue;
+  margin: 5px;
 }
 
-.line{
+/* .line {
   margin: auto;
+} */
+
+.days-count {
+  float: left;
 }
 
-.days-count{
-  float:left;
-}
-
-.likes-comment{
+.likes-comment {
   float: right;
   width: 60px;
+}
+
+article:hover {
+ box-shadow: 5px 10px #888888
 
 }
