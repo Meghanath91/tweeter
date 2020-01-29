@@ -9,7 +9,6 @@ main {
 
 .tweet-container {
   height: 150px;
-  border:solid;
   /* border-bottom: 2px solid black; */
   font-family: 'Source Sans Pro',
     sans-serif;
@@ -21,27 +20,46 @@ main {
   background-color: #f4f1ec;
   /* line-height: 17px; */
 }
+
+article {
+  border:solid 2px black;
+}
+
+.tweetsHeader {
+  display: block;
+  overflow: auto;
+}
+
+footer {
+  display: block;
+  overflow: auto;
+}
+
 article.tweets.p {
   text-align: center;
 }
+
 .profile-pic {
   float: left;
 }
+
 .profile-name{
   float: left;
 }
+
 .nickname {
   float: right;
   color: blue;
- 
 }
+
 .line{
-  
-  
+  margin: auto;
 }
+
 .days-count{
   float:left;
 }
+
 .likes-comment{
   float: right;
   width: 60px;
