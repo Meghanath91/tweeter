@@ -6,3 +6,44 @@ main {
   margin-right: auto;
   display: block;
 }
+
+.tweet-container {
+  height: 150px;
+  border:solid;
+  /* border-bottom: 2px solid black; */
+  font-family: 'Source Sans Pro',
+    sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 60px;
+  resize: none;
+  background-color: #f4f1ec;
+  /* line-height: 17px; */
+}
+article.tweets.p {
+  text-align: center;
+}
+.profile-pic {
+  float: left;
+}
+.profile-name{
+  float: left;
+}
+.nickname {
+  float: right;
+  color: blue;
+ 
+}
+.line{
+  
+  
+}
+.days-count{
+  float:left;
+}
+.likes-comment{
+  float: right;
+  width: 60px;
+
+}
