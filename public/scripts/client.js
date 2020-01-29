@@ -5,6 +5,7 @@
  */
 
 // Fake data taken from initial-tweets.json
+
 const data = [
   {
     user: {
@@ -41,6 +42,7 @@ const renderTweets = function(tweetsFromDataBase) {
   // takes return value and appends it to the tweets container
 };
 
+
 const createTweetElement = function(tweetToMarkUp) {
   //let $tweet = $('<article>').addClass('tweet');
   const markUp = `<article class= "tweets">
@@ -52,7 +54,7 @@ const createTweetElement = function(tweetToMarkUp) {
 <p class="tweet-desc">${tweetToMarkUp.content.text}</p>
 <hr class="line"width=”200″ align=”left”> 
 <footer>
-  <p class="days-count">${tweetToMarkUp.created_at}</p>
+  <p class="days-count">${moment(tweetToMarkUp.created_at).fromNow()}</p>
   <img class="likes-comment"src="/images/likes-comment.png">
 </footer>
 </article>
