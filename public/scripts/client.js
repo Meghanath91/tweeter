@@ -8,6 +8,13 @@
 
 const data = [];
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+
 const renderTweets = function(tweetsFromDataBase) {
   //$("#tweetFromData").empty();
   for (let fakeTweet of tweetsFromDataBase) {
@@ -22,7 +29,7 @@ const createTweetElement = function(tweetToMarkUp) {
   <span class="profile-name">${tweetToMarkUp.user.name}</span>
   <span class="nickname">${tweetToMarkUp.user.handle}</span>
 </div>
-<p class="tweet-desc">${tweetToMarkUp.content.text}</p>
+<p class="tweet-desc">${escape(tweetToMarkUp.content.text)}</p>
 <hr class="line"width=”200″ align=”left”> 
 <footer>
   <p class="days-count">${moment(tweetToMarkUp.created_at).fromNow()}</p>

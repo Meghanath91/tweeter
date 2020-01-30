@@ -13,5 +13,8 @@ header {
 .name {
   font-style: Bold;
   font-size: medium;
-
+}
+#compose {
+margin-top: 25px;
+float:right;
 }
