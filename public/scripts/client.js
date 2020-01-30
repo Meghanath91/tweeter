@@ -11,7 +11,7 @@ const data = [];
 const renderTweets = function(tweetsFromDataBase) {
   $("#tweetFromData").empty();
   for (let fakeTweet of tweetsFromDataBase) {
-    $("#tweetFromData").append(createTweetElement(fakeTweet));
+    $("#tweetFromData").prepend(createTweetElement(fakeTweet));
   }
 };
 
