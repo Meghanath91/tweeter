@@ -15,6 +15,8 @@ const escape =  function(str) {
 }
 
 
+
+
 const renderTweets = function(tweetsFromDataBase) {
   //$("#tweetFromData").empty();
   for (let fakeTweet of tweetsFromDataBase) {
@@ -41,6 +43,11 @@ const createTweetElement = function(tweetToMarkUp) {
 };
 
 $(document).ready(function() {
+  $( "#compose" ).click(function() {
+    $( ".new-tweet" ).toggle()
+      // Animation complete.
+    });
+
   $(".form-inline").submit(function(event) {
     //alert( "Handler for .submit() called." );
     event.preventDefault();

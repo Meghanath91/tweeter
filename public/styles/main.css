@@ -40,13 +40,13 @@ footer {
 }
 
 .nickname {
-  
+  visibility: hidden;
   float: right;
   color: blue;
   margin: 5px;
 }
-article:hover   {
-  display:block;
+article:hover .nickname {
+  visibility: visible;
 }
 
 .days-count {
