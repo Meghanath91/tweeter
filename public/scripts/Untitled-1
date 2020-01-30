@@ -5,7 +5,17 @@
  */
 
 // Fake data taken from initial-tweets.json
-
+const loadTweets = function() {
+  $.ajax({
+    type: "GET",
+    url: "/tweets",
+    data: "data",
+    dataType: "JSON",
+    success: data => {
+      renderTweets(data);
+    }
+  });
+};
 const data = [];
 
 const renderTweets = function(tweetsFromDataBase) {
@@ -34,6 +44,7 @@ const createTweetElement = function(tweetToMarkUp) {
 };
 
 $(document).ready(function() {
+  //loadTweets();
   $(".form-inline").submit(function(event) {
     //alert( "Handler for .submit() called." );
     event.preventDefault();
@@ -42,21 +53,11 @@ $(document).ready(function() {
       url: "/tweets",
       data: $(this).serialize(),
       dataType: "String",
-      success: loadTweets()
-    });
+      // success: loadTweets(data)
+    }).then(function(){
+      loadTweets();
+    })
   });
-
-  const loadTweets = function() {
-    $.ajax({
-      type: "GET",
-      url: "/tweets",
-      data: "data",
-      dataType: "JSON",
-      success: data => {
-        //console.log(data)
-        renderTweets(data);
-      }
-    });
-  };
-  loadTweets();
 });
+
+
