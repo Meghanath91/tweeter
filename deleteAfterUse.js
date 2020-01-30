@@ -6,4 +6,4 @@
 //   time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 // );
 var moment = require('moment');
-moment().format(1504095567183);
+moment().format();
