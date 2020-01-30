@@ -9,7 +9,7 @@
 const data = [];
 
 const renderTweets = function(tweetsFromDataBase) {
-  $("#tweetFromData").empty();
+  //$("#tweetFromData").empty();
   for (let fakeTweet of tweetsFromDataBase) {
     $("#tweetFromData").prepend(createTweetElement(fakeTweet));
   }
@@ -37,13 +37,25 @@ $(document).ready(function() {
   $(".form-inline").submit(function(event) {
     //alert( "Handler for .submit() called." );
     event.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: $(this).serialize(),
-      dataType: "String",
-      success: loadTweets()
-    });
+    
+    numOfChar = $("#tweetArea").val().length;
+
+    console.log(numOfChar);
+
+    if (!numOfChar) {
+      alert("Empty tweet please type something");
+    } else if (numOfChar > 140) {
+      alert("Number of characters exceeded 140");
+    } else {
+      
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: $(this).serialize(),
+        dataType: "String",
+        success: loadTweets()
+      });
+    }
   });
 
   const loadTweets = function() {
@@ -53,7 +65,7 @@ $(document).ready(function() {
       data: "data",
       dataType: "JSON",
       success: data => {
-        //console.log(data)
+        $("#tweetFromData").empty();
         renderTweets(data);
       }
     });
