@@ -44,7 +44,6 @@ const renderTweets = function(tweetsFromDataBase) {
 
 
 const createTweetElement = function(tweetToMarkUp) {
-  //let $tweet = $('<article>').addClass('tweet');
   const markUp = `<article class= "tweets">
 <div class="tweetsHeader">
   <img class="profile-pic"src=${tweetToMarkUp.user.avatars}>
