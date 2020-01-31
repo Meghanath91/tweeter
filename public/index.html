@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -27,27 +28,29 @@
     <nav>
       <span class="logo">tweeter</span>
       <span class="logo-line"><strong>Write</strong> a new tweet</span>
-      <!-- <h1>fa fa-angle-double-down</h1> -->
-      <i  id="compose"class="fa fa-angle-double-down" style="font-size:48px;color:red"></i>
+      <i id="compose"class="fa fa-angle-double-down"></i>
     </nav>
     <header>
       <div>
-        <!-- <img class="background"src="/images/concrete-wall-2.png"> -->
           <img class="avatar"src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <span><span class= "name"><strong>Meghanath</strong>Bala </span></span>
+          <span class= "name"><strong style="
+            font-weight: 900;">Meghanath </strong>Bala </span>
       </div>
   </header>
   
     <!-- Page-specific (main) content here -->
     <main class="container">
+     
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-          <form class="form-inline"action="/tweets" method="POST">
+        <form class="form-inline"action="/tweets" method="POST">
           <textarea id="tweetArea" name="text" placeholder="What are you humming about?"></textarea>
           <input class="submit"type="submit" value="Tweet">
+          <p class="error error-display">Empty tweet please type something</p>
+          <p class="error error-exceed">Number of characters exceeded 140</p>
           <span class="counter">140</span>
         </form>
       </section>
@@ -58,3 +61,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
   </body>
 </html>
+<!-- style="font-size:48px;color:red" -->

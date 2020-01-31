@@ -1,3 +1,4 @@
+/* @media only screen and (min-width: 1024px) { */
 main {
   width: 90%;
   text-align: center;
@@ -8,8 +9,9 @@ main {
 }
 
 article {
+  box-sizing: border-box;
   border: solid 2px black;
-  height: 170px;
+  /* height: 170px; */
   font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -17,11 +19,18 @@ article {
   margin-top: 60px;
   resize: none;
   background-color: #f4f1ec;
+  overflow-wrap: break-word;
+  overflow: auto;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .tweetsHeader {
   display: block;
   overflow: auto;
+  position: relative;
+  height: 150px;
 }
 
 footer {
@@ -30,34 +39,47 @@ footer {
 }
 
 .profile-pic {
-  margin: 5px;
-  float: left;
+  /* position: absolute; */
+  margin-left: 1em;
+  margin-top: 0.5em;
 }
 
 .profile-name {
-  margin: 18px;
-  float: left;
+  position: absolute;
+  left: 4em;
+  top: 1.5em;
+  font-size: 25px;
 }
 
 .nickname {
+  position: absolute;
   visibility: hidden;
-  float: right;
   color: blue;
-  margin: 5px;
+  top: 1.5em;
+  right: 1em;
 }
 article:hover .nickname {
   visibility: visible;
 }
 
 .days-count {
-  float: left;
+  
+  
+  
 }
 
 .likes-comment {
-  float: right;
-  width: 60px;
+  width: 45px;
+
 }
 
 article:hover {
   box-shadow: 5px 10px #888888;
 }
+footer{
+  /* position: relative;  */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* } */

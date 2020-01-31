@@ -8,17 +8,13 @@
 
 const data = [];
 
-const escape =  function(str) {
-  let div = document.createElement('div');
+const escape = function(str) {
+  let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
-
-
-
+};
 
 const renderTweets = function(tweetsFromDataBase) {
-  //$("#tweetFromData").empty();
   for (let fakeTweet of tweetsFromDataBase) {
     $("#tweetFromData").prepend(createTweetElement(fakeTweet));
   }
@@ -42,47 +38,47 @@ const createTweetElement = function(tweetToMarkUp) {
   return markUp;
 };
 
+
+const loadTweets = function() {
+  $.ajax({
+    type: "GET",
+    url: "/tweets",
+    dataType: "JSON",
+    success: data => {
+      $("#tweetFromData").empty();
+      renderTweets(data);
+    }
+  });
+};
+
 $(document).ready(function() {
-  $( "#compose" ).click(function() {
-    $( ".new-tweet" ).toggle()
-      // Animation complete.
-    });
+  $("#compose").click(function() {
+    $(".new-tweet").toggle();
+    // Animation complete.
+  });
 
   $(".form-inline").submit(function(event) {
-    //alert( "Handler for .submit() called." );
     event.preventDefault();
-    
-    numOfChar = $("#tweetArea").val().length;
-
-    console.log(numOfChar);
-
-    if (!numOfChar) {
-      alert("Empty tweet please type something");
-    } else if (numOfChar > 140) {
-      alert("Number of characters exceeded 140");
-    } else {
+    let numOfChar = $("#tweetArea").val().length;
+    if (numOfChar === 0) {
+      $(".error-display").css("display", "inline-block");
       
+    } else if (numOfChar > 140) {
+      $(".error-exceed").css("display", "inline-block");
+    } else {
+      $(".error").css("display", "none");
+      const data =  $(this).serialize();
+      $("#tweetArea").val("");
       $.ajax({
         type: "POST",
         url: "/tweets",
-        data: $(this).serialize(),
+        data: data,
         dataType: "String",
-        success: loadTweets()
+        complete: loadTweets
       });
     }
   });
 
-  const loadTweets = function() {
-    $.ajax({
-      type: "GET",
-      url: "/tweets",
-      data: "data",
-      dataType: "JSON",
-      success: data => {
-        $("#tweetFromData").empty();
-        renderTweets(data);
-      }
-    });
-  };
+ 
   loadTweets();
 });

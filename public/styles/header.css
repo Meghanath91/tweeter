@@ -1,3 +1,4 @@
+/* @media only screen and (min-width: 1024px) { */
 header {
   font-size: medium;
   font-weight:200 ;
@@ -14,7 +15,8 @@ header {
   font-style: Bold;
   font-size: medium;
 }
-#compose {
+/* #compose {
 margin-top: 25px;
 float:right;
-}
+} */
+/* } */
