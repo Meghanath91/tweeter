@@ -1,84 +1,87 @@
-/* design for main content */
-main {
-  width: 90%;
-  text-align: center;
-  height: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-};
-
-article {
-  box-sizing: border-box;
-  border: solid 2px black;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  width: 100%;
-  margin-top: 60px;
-  resize: none;
-  background-color: #f4f1ec;
-  overflow-wrap: break-word;
-  overflow: auto;
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 10px;
-};
-
-.tweetsHeader {
-  display: block;
-  overflow: auto;
-  position: relative;
-  height: 150px;
-};
-
-footer {
-  display: block;
-  overflow: auto;
-};
-
-.profile-pic {
-  margin-left: 1em;
-  margin-top: 0.5em;
-};
-
-.profile-name {
-  position: absolute;
-  left: 4em;
-  top: 1.5em;
-  font-size: 25px;
-};
-
-.nickname {
-  position: absolute;
-  visibility: hidden;
-  color: blue;
-  top: 1.5em;
-  right: 1em;
-};
-
-article:hover .nickname {
-  visibility: visible;
-};
-
-.likes-comment {
-  width: 45px;
-};
-
-article:hover {
-  box-shadow: 5px 10px #888888;
-};
-
-footer {
-  display: flex;
-  justify-content: space-between;
-};
-
-/* respnsive design tablet  */
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) { */
   main {
-    margin-top: 5em;
-    width: 50%;
-    right: 2em;
-  };
-};
+    width: 90%;
+    text-align: center;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  article {
+    box-sizing: border-box;
+    border: solid 2px black;
+    /* height: 170px; */
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 60px;
+    resize: none;
+    background-color: #f4f1ec;
+    overflow-wrap: break-word;
+    overflow: auto;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .tweetsHeader {
+    display: block;
+    overflow: auto;
+    position: relative;
+    height: 150px;
+  }
+  
+  footer {
+    display: block;
+    overflow: auto;
+  }
+  
+  .profile-pic {
+    /* position: absolute; */
+    margin-left: 1em;
+    margin-top: 0.5em;
+  }
+  
+  .profile-name {
+    position: absolute;
+    left: 4em;
+    top: 1.5em;
+    font-size: 25px;
+  }
+  
+  .nickname {
+    position: absolute;
+    visibility: hidden;
+    color: blue;
+    top: 1.5em;
+    right: 1em;
+  }
+  article:hover .nickname {
+    visibility: visible;
+  }
+  
+  
+  
+  .likes-comment {
+    width: 45px;
+  
+  }
+  
+  article:hover {
+    box-shadow: 5px 10px #888888;
+  }
+  footer{
+    /* position: relative;  */
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (min-width: 1024px) {
+    main{
+      margin-top: 5em;
+      width: 50%;
+      right: 2em;
+      
+    }
+  }
