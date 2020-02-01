@@ -1,60 +1,54 @@
-/* @media only screen and (min-width: 1024px) { */
+/* design for compose tweet area */
+.new-tweet {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+textarea {
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 15px;
+  resize: none;
+  background-color: #f4f1ec;
+}
+.submit {
+  background-color: #4056a1;
+  font-family: "Bungee", cursive;
+  font-size: 20px;
+  color: white;
+  float: left;
+}
+.counter {
+  float: right;
+  font-family: "Bungee", cursive;
+}
+
+.error-display {
+  display: none;
+  color: red;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.error-exceed {
+  display: none;
+  color: red;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+/* responsive design for tablet */
+@media only screen and (min-width: 1024px) {
   .new-tweet {
-    display: none;
-    text-align: center;
-    width: 100%;
+    margin-top: 4em;
   }
-  textarea {
-    border: none;
-    border-bottom: 2px solid black;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    width: 100%;
-    margin-top: 15px;
-    resize: none;
-    background-color: #f4f1ec;
-    /* line-height: 17px; */
-  }
-  .submit {
-    background-color: #4056a1;
-    font-family: "Bungee", cursive;
-    font-size: 20px;
-    color: white;
-    float: left;
-  }
-  .counter {
-    float: right;
-    font-family: "Bungee", cursive;
-  }
-  
-  .error-display {
-    display: none;
-    /* border: solid 2px rgb(253, 20, 20); */
-    color: red;
-    width: 50%;
-    text-align: center;
-    margin: auto;
-  }
-  .error-exceed {
-    display: none;
-    /* border: solid 2px rgb(253, 20, 20); */
-    color: red;
-    width: 50%;
-    text-align: center;
-    margin: auto;
-  }
-  
-  @media only screen and (min-width: 1024px) { 
-    .new-tweet {
-      /* display: block; */
-      margin-top: 4em;
-      /* text-align: center;
-      width: 100px; */
-    }
-  }
-  /* responsive design for laptop */
-@media only screen and (max-width: 1024px){
+}
+/* responsive design for laptop */
+@media only screen and (max-width: 1024px) {
   .new-tweet {
     margin-top: 3em;
   }

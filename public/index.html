@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- App CSS -->
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
-    
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="logo">tweeter</span>
-      <span class="logo-line"><strong>Write</strong> a new tweet</span>
-      <img id="compose" src="/images/arrow.gif" />
-      <!-- <i id="compose"class="fa fa-angle-double-down"></i> -->
-    </nav>
-    <header>
-      <div>
-          <img class="avatar"src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <span class= "name"><strong style="
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="logo">tweeter</span>
+    <span class="logo-line"><strong>Write</strong> a new tweet</span>
+    <img id="compose" src="/images/arrow.gif">
+  </nav>
+  <!-- header contains avatar,name -->
+  <header>
+    <div>
+      <img class="avatar" src="/images/profile-hex.png">
+    </div>
+    <div>
+      <span class="name"><strong style="
             font-weight: 900;">Meghanath </strong>Bala </span>
-      </div>
-    </header>
-  
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-     
-      <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
-        <form class="form-inline"action="/tweets" method="POST">
-          <textarea id="tweetArea" name="text" placeholder="What are you humming about?"></textarea>
-          <input class="submit"type="submit" value="Tweet">
-          <p class="error error-display">Empty tweet please type something</p>
-          <p class="error error-exceed">Number of characters exceeded 140</p>
-          <span class="counter">140</span>
-        </form>
-      </section>
-      <section id="tweetFromData"> 
-      </section>
-    </main>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-  </body>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <section class="new-tweet">
+      <!-- Compose Tweet -->
+      <form class="form-inline" action="/tweets" method="POST">
+        <textarea id="tweetArea" name="text" placeholder="What are you humming about?"></textarea>
+        <input class="submit" type="submit" value="Tweet">
+        <!-- error messages -->
+        <p class="error error-display">Empty tweet please type something</p>
+        <p class="error error-exceed">Number of characters exceeded 140</p>
+        <span class="counter">140</span>
+      </form>
+    </section>
+    <!-- this section is responsible for creating new tweets from client.js -->
+    <section id="tweetFromData">
+    </section>
+  </main>
+  <!-- -- counter generated from comoser-char-counter.js-- -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <!-- moment.js for time functions -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+</body>
+
 </html>
-<!-- style="font-size:48px;color:red" -->

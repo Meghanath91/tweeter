@@ -1,3 +1,4 @@
+/* design for navigation section */
 nav {
   font-family: "Bungee", cursive;
   color: #ffffff;
@@ -8,7 +9,6 @@ nav {
   z-index: 1;
   padding: 1.5em;
 }
-
 .logo {
   position: absolute;
   font-weight: 700;
@@ -23,7 +23,6 @@ nav {
   font-family: "Source sans pro", sans-serif;
 }
 #compose {
-
   color: red;
   margin-top: 25px;
   position: absolute;
@@ -31,6 +30,7 @@ nav {
   right: 8rem;
   width: 20px;
 }
+/* responsive design for laptop */
 @media only screen and (max-width: 1024px) {
   nav {
     background-color: rgb(243, 133, 8);
