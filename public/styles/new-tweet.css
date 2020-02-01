@@ -14,7 +14,7 @@
     margin-top: 15px;
     resize: none;
     background-color: #f4f1ec;
-    line-height: 17px;
+    /* line-height: 17px; */
   }
   .submit {
     background-color: #4056a1;
@@ -30,7 +30,7 @@
   
   .error-display {
     display: none;
-    border: solid 2px rgb(253, 20, 20);
+    /* border: solid 2px rgb(253, 20, 20); */
     color: red;
     width: 50%;
     text-align: center;
@@ -38,7 +38,7 @@
   }
   .error-exceed {
     display: none;
-    border: solid 2px rgb(253, 20, 20);
+    /* border: solid 2px rgb(253, 20, 20); */
     color: red;
     width: 50%;
     text-align: center;
@@ -53,3 +53,9 @@
       width: 100px; */
     }
   }
+  /* responsive design for laptop */
+@media only screen and (max-width: 1024px){
+  .new-tweet {
+    margin-top: 3em;
+  }
+}

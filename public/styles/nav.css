@@ -23,9 +23,16 @@ nav {
   font-family: "Source sans pro", sans-serif;
 }
 #compose {
+
   color: red;
   margin-top: 25px;
   position: absolute;
   top: 3.5rem;
   right: 8rem;
+  width: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: rgb(243, 133, 8);
+  }
 }
