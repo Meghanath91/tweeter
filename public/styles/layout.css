@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,20 +17,13 @@ body {
   display: flex;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   height: 5000px;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
+/* responsive design for laptop */
 @media only screen and (max-width: 1024px) {
-
-body {
-/* position: relative; */
-flex-direction: column;
-width: 100%;
-}
-
+  body {
+    flex-direction: column;
+    width: 100%;
+  }
 }
