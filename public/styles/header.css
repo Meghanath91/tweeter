@@ -1,22 +1,29 @@
-/* @media only screen and (min-width: 1024px) { */
+
 header {
   font-size: medium;
-  font-weight:200 ;
-  font-family:'Source Sans Pro', sans-serif;
-  color:  #FFFFFF;
+  font-weight: 200;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
   height: 500px;
-  position : relative;
+  position: relative;
   background-color: rgb(174, 166, 248);
   width: 100%;
-  padding-top: 130px ;
+  padding-top: 130px;
   text-align: center;
 }
 .name {
   font-style: Bold;
   font-size: medium;
 }
-/* #compose {
-margin-top: 25px;
-float:right;
-} */
-/* } */
+
+@media only screen and (min-width: 1024px) {
+  header {
+    left: 3em;
+    top: 11em;
+    width: 400px;
+    height: 400px;
+  }
+  .avatar {
+    width: 150px;
+  }
+}

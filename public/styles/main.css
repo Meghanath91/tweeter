@@ -62,11 +62,7 @@ article:hover .nickname {
   visibility: visible;
 }
 
-.days-count {
-  
-  
-  
-}
+
 
 .likes-comment {
   width: 45px;
@@ -81,5 +77,11 @@ footer{
   display: flex;
   justify-content: space-between;
 }
-
-/* } */
+@media only screen and (min-width: 1024px) {
+  main{
+    margin-top: 5em;
+    width: 50%;
+    right: 2em;
+    
+  }
+}

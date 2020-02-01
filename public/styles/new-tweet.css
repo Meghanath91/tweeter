@@ -45,4 +45,11 @@ textarea {
   margin: auto;
 }
 
-/* } */
+@media only screen and (min-width: 1024px) { 
+  .new-tweet {
+    /* display: block; */
+    margin-top: 4em;
+    /* text-align: center;
+    width: 100px; */
+  }
+}
