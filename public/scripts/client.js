@@ -61,8 +61,10 @@ $(document).ready(function() {
     let numOfChar = $("#tweetArea").val().length;
     //if user try to tweet empty string
     if (numOfChar === 0) {
+      $(".error").css("display", "none");
       $(".error-display").css("display", "inline-block");
     } else if (numOfChar > 140) {
+      $(".error").css("display", "none");
       //if number of characters exceed 140
       $(".error-exceed").css("display", "inline-block");
     } else {
