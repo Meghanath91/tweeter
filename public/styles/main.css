@@ -1,4 +1,3 @@
-/* @media only screen and (min-width: 1024px) { */
   main {
     width: 90%;
     text-align: center;
@@ -11,7 +10,6 @@
   article {
     box-sizing: border-box;
     border: solid 2px black;
-    /* height: 170px; */
     font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
     font-weight: 600;
@@ -39,7 +37,6 @@
   }
   
   .profile-pic {
-    /* position: absolute; */
     margin-left: 1em;
     margin-top: 0.5em;
   }
@@ -62,8 +59,6 @@
     visibility: visible;
   }
   
-  
-  
   .likes-comment {
     width: 45px;
   
@@ -73,7 +68,6 @@
     box-shadow: 5px 10px #888888;
   }
   footer{
-    /* position: relative;  */
     display: flex;
     justify-content: space-between;
   }
