@@ -51,10 +51,12 @@ const loadTweets = function() {
 };
 //when page loaded
 $(document).ready(function() {
-  //button click for write new tweet
-  $("#compose").click(function() {
-    $(".new-tweet").toggle();
-  });
+  //button click for write new tweet(textarea will automatically focused)
+  $('#compose').click(function(){
+    $('.new-tweet').slideToggle("slow", function(){
+      $('#tweetArea').focus()
+    })
+  })
   //when submit button clicks
   $(".form-inline").submit(function(event) {
     event.preventDefault(); //this will prevent default action of browser
@@ -79,7 +81,6 @@ $(document).ready(function() {
         type: "POST",
         url: "/tweets",
         data: data,
-        dataType: "String",
         complete: loadTweets
       });
     }
